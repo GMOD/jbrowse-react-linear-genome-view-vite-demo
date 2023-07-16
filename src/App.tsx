@@ -40,11 +40,11 @@ function View() {
       <p>
         The code for this app is available at{' '}
         <a
-          href="https://github.com/GMOD/jbrowse-components/tree/main/embedded_demos/jbrowse-react-linear-genome-view-vite"
+          href="https://github.com/GMOD/jbrowse-react-linear-genome-view-vite-demo"
           target="_blank"
           rel="noreferrer"
         >
-          https://github.com/GMOD/jbrowse-components/tree/main/embedded_demos/jbrowse-react-linear-genome-view-vite
+          https://github.com/GMOD/jbrowse-react-linear-genome-view-vite-demo
         </a>
         .
       </p>
