@@ -12,7 +12,6 @@
     "postdeploy": "aws cloudfront create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/demos/lgv-vite/*\""
   },
   "dependencies": {
-    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
     "@fontsource/roboto": "^5.0.3",
     "@jbrowse/core": "^2.0.0",
     "@jbrowse/react-linear-genome-view": "^2.0.0",
@@ -25,6 +24,7 @@
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^4.0.1",
     "buffer": "^6.0.3",
+    "prettier": "^3.2.5",
     "typescript": "^5.1.6",
     "vite": "^5.0.10"
   }
