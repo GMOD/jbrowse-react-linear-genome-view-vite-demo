@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import '@fontsource/roboto'
 import {
   createViewState,
@@ -21,9 +22,23 @@ function View() {
       assembly,
       tracks,
       defaultSession,
+
       onChange: patch => {
         setPatches(previous => previous + JSON.stringify(patch) + '\n')
       },
+      configuration: {
+        rpc: {
+          defaultDriver: 'WebWorkerRpcDriver',
+        },
+      },
+      makeWorkerInstance: () => {
+        return new Worker(new URL('./rpcWorker', import.meta.url), {
+          type: 'module',
+        })
+      },
+
+      hydrateFn: hydrateRoot,
+      createRootFn: createRoot,
     })
     setViewState(state)
   }, [])
