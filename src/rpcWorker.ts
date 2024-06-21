@@ -4,9 +4,6 @@ import { enableStaticRendering } from 'mobx-react'
 
 // locals
 import corePlugins from '@jbrowse/react-linear-genome-view/esm/corePlugins'
-import { Buffer } from 'buffer'
-
-self.Buffer = Buffer
 
 // static rendering is used for "SSR" style rendering which is done on the
 // worker
