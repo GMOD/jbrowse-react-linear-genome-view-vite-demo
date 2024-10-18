@@ -27,5 +27,8 @@
     "prettier": "^3.2.5",
     "typescript": "^5.1.6",
     "vite": "^5.0.10"
+  },
+  "resolutions": {
+    "@mui/icons-material": "6.0.2"
   }
 }
