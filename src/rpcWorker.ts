@@ -9,7 +9,6 @@ import corePlugins from '@jbrowse/react-linear-genome-view/esm/corePlugins'
 // worker
 enableStaticRendering(true)
 
-// eslint-disable-next-line @typescript-eslint/no-floating-promises
 initializeWorker(corePlugins, {})
 
 export default function doNothing() {

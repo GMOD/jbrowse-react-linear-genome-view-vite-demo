@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { createRoot, hydrateRoot } from 'react-dom/client'
+// @ts-expect-error no types for font
 import '@fontsource/roboto'
 import {
   createViewState,
