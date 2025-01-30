@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { createRoot, hydrateRoot } from 'react-dom/client'
 // @ts-expect-error no types for font
 import '@fontsource/roboto'
 import {
@@ -37,9 +36,6 @@ function View() {
           type: 'module',
         })
       },
-
-      hydrateFn: hydrateRoot,
-      createRootFn: createRoot,
     })
     setViewState(state)
   }, [])
