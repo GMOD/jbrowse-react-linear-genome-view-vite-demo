@@ -35,8 +35,5 @@
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.11.0",
     "vite": "^6.0.3"
-  },
-  "resolutions": {
-    "@mui/icons-material": "6.0.2"
   }
 }

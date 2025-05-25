@@ -19,6 +19,7 @@ self.document = {
     return { appendChild() {} }
   },
   documentElement: {},
+  head: { appendChild: () => {} },
   querySelectorAll: () => [],
   createElement() {
     return {
