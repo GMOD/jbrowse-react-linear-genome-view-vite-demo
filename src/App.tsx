@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 // @ts-expect-error no types for font
 import '@fontsource/roboto'
 import {
@@ -11,24 +11,8 @@ import { config } from './config'
 type ViewModel = ReturnType<typeof createViewState>
 
 function View() {
-  const [viewState, setViewState] = useState<ViewModel>()
-  const [patches, setPatches] = useState('')
+  const [viewState] = useState<ViewModel>(() => createViewState({ ...config }))
   const [stateSnapshot, setStateSnapshot] = useState('')
-
-  useEffect(() => {
-    const state = createViewState({
-      ...config,
-
-      onChange: patch => {
-        setPatches(previous => previous + JSON.stringify(patch) + '\n')
-      },
-    })
-    setViewState(state)
-  }, [])
-
-  if (!viewState) {
-    return null
-  }
 
   return (
     <>
@@ -85,17 +69,6 @@ function View() {
         </button>
       </div>
       <textarea value={stateSnapshot} readOnly rows={20} cols={80} />
-      <h3>React to the view</h3>
-      <p>
-        Using <code>onChange</code> in <code>createViewState</code>, you can
-        observe what is happening in the view and react to it. The changes in
-        the state of the view are emitted as{' '}
-        <a href="http://jsonpatch.com/" target="_blank" rel="noreferrer">
-          JSON patches
-        </a>
-        . The patches for the component on this page are shown below.
-      </p>
-      <textarea value={patches} readOnly rows={5} cols={80} wrap="off" />
     </>
   )
 }
