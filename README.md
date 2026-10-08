@@ -1,21 +1,17 @@
-# vite with @jbrowse/react-linear-genome-view
+# vite with @jbrowse/react-linear-genome-view2
 
-This is a demo of using the linear genome view with vite (see
-https://vitejs.dev/)
+`@jbrowse/react-linear-genome-view2` v5 (currently the `next` prerelease on npm) built with [vite](https://vite.dev/). The RPC worker is one import: `esm/rpcWorker?worker`, with `worker: { format: "es" }` in `vite.config.ts`.
 
-Vite is a build system that is very fast and becoming more popular, using
-esbuild and rollup instead of webpack
-
-This particular demo includes several polyfills that are needed for JBrowse
-including the Buffer polyfill
-
-## Demo of `@jbrowse/react-linear-genome-view` with vite
-
-See this app running at https://jbrowse.org/demos/lgv-vite/.
+See it running at https://jbrowse.org/demos/lgv-vite/.
 
 ## Usage
 
-Run `yarn` and then `yarn dev` to start a development instance
+```bash
+yarn
+yarn dev
+```
 
-Run `yarn build` which produces a `build` directory that can be deployed to a
-static web server
+`yarn build` writes a static site.
+
+More examples: https://jbrowse.org/storybook/, and the
+[embedding guide](https://jbrowse.org/jb2/docs/embedded_components/).
