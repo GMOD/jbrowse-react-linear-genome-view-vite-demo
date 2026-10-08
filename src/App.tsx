@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-// @ts-expect-error no types for font
 import '@fontsource/roboto'
 import {
   JBrowseLinearGenomeView,
